@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc · working</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-inner">
+            <div class="header">
+                <div class="logo">Calculator</div>
+            </div>
+
+            <div class="display">
+                <input type="text" id="result" class="result-field" value="0" readonly>
+            </div>
+
+            <div class="buttons">
+                <button class="btn" onclick="append('7')">7</button>
+                <button class="btn" onclick="append('8')">8</button>
+                <button class="btn" onclick="append('9')">9</button>
+                <button class="btn operator del" onclick="backspace()">DEL</button>
+
+                <button class="btn" onclick="append('4')">4</button>
+                <button class="btn" onclick="append('5')">5</button>
+                <button class="btn" onclick="append('6')">6</button>
+                <button class="btn operator" onclick="append('+')">+</button>
+
+                <button class="btn" onclick="append('1')">1</button>
+                <button class="btn" onclick="append('2')">2</button>
+                <button class="btn" onclick="append('3')">3</button>
+                <button class="btn operator" onclick="append('-')">-</button>
+
+                <button class="btn" onclick="append('.')">.</button>
+                <button class="btn" onclick="append('0')">0</button>
+                <button class="btn operator" onclick="append('/')">/</button>
+                <button class="btn operator" onclick="append('*')">x</button>
+
+                <button class="btn reset" onclick="resetCalc()">RESET</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+            </div>
+
+            <div class="credit">arithmetic · eval()</div>
+        </div>
+    </div>
+
+    <script>
+        function append(val) {
+            let display = document.getElementById('result');
+            if (display.value === '0' && val !== '.') {
+                display.value = val;
+            } else {
+                display.value += val;
+            }
+        }
+
+        function backspace() {
+            let display = document.getElementById('result');
+            display.value = display.value.slice(0, -1) || '0';
+        }
+
+        function resetCalc() {
+            document.getElementById('result').value = '0';
+        }
+
+        function calculate() {
+            let display = document.getElementById('result');
+            try {
+                let expression = display.value.replace(/x/g, '*');
+                let result = eval(expression);
+                display.value = result;
+            } catch(e) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #d0d9e0 0%, #b4c0cc 100%);
+    font-family: 'Calibri', 'Arial', 'Helvetica', 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.cv-card {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 25px 45px -12px rgba(18, 31, 48, 0.35);
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.left-panel {
+    background-color: #0b2b44;
+    color: #f0f6fc;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.right-panel {
+    background-color: white;
+    padding: 2.8rem 2.8rem 2.8rem 2.5rem;
+}
+
+.name-title {
+    margin-bottom: 0.3rem;
+}
+
+.name-title h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 0.4rem;
+    border-left: 5px solid #59c3d0;
+    padding-left: 1.2rem;
+    white-space: nowrap;
+}
+
+.name-title h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #bfd9f0;
+    letter-spacing: 1.5px;
+    margin-left: 1.2rem;
+    margin-top: 0.3rem;
+    text-transform: uppercase;
+}
+
+.contact-section {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 1.6rem 1.4rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: #9bbad0;
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid rgba(89, 195, 208, 0.4);
+    padding-bottom: 0.5rem;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    color: #e5efff;
+    word-break: break-word;
+    white-space: nowrap;
+}
+
+.contact-item i {
+    width: 1.6rem;
+    font-size: 1.25rem;
+    color: #59c3d0;
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    color: #e5efff;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255,255,255,0.3);
+}
+
+.contact-item a:hover {
+    color: white;
+    border-bottom: 1px solid #59c3d0;
+}
+
+.edu-block {
+    margin-bottom: 1.5rem;
+}
+
+.edu-years {
+    font-weight: 600;
+    color: #59c3d0;
+    font-size: 1.1rem;
+    letter-spacing: 0.4px;
+}
+
+.edu-school {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin: 0.3rem 0 0.2rem;
+    color: white;
+}
+
+.edu-desc {
+    font-size: 0.95rem;
+    color: #c9dff2;
+    line-height: 1.5;
+}
+
+.skill-tags, .lang-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: rgba(89, 195, 208, 0.12);
+    border: 1px solid rgba(89, 195, 208, 0.3);
+    padding: 0.4rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: white;
+}
+
+.lang-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    padding: 0.7rem 0;
+}
+
+.lang-name {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.lang-level {
+    font-size: 0.9rem;
+    background: #1e415a;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    color: #d4edff;
+}
+
+.right-section {
+    margin-bottom: 2.3rem;
+}
+
+.right-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #1f4b6e;
+    border-bottom: 3px solid #59c3d0;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+}
+
+.profile-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #1d2c3a;
+    margin-bottom: 0.5rem;
+    background: #f8faff;
+    padding: 1.4rem 1.7rem;
+    border-radius: 22px;
+    border: 1px solid #e9edf4;
+}
+
+.work-item {
+    margin-bottom: 2rem;
+}
+
+.work-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+}
+
+.work-company {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: #0b2b44;
+}
+
+.work-role {
+    font-weight: 500;
+    color: #33658a;
+    margin-left: 0.3rem;
+    font-size: 1.05rem;
+}
+
+.work-date {
+    background: #e2ecf9;
+    padding: 0.3rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f4b6e;
+    letter-spacing: 0.4px;
+}
+
+.work-bullets {
+    list-style: none;
+    margin-top: 0.8rem;
+    padding-left: 0.3rem;
+}
+
+.work-bullets li {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    gap: 1rem;
+    color: #2b3f53;
+}
+
+.work-bullets li i {
+    color: #59c3d0;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    width: 1.2rem;
+}
+
+.ref-single {
+    background: #f5f9ff;
+    border-radius: 18px;
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dbe4f0;
+}
+
+.social-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #eaf1fb;
+    padding: 0.6rem 1.4rem;
+    border-radius: 40px;
+    color: #0b2b44;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid #b7d3e9;
+    transition: 0.2s;
+}
+
+.social-link i {
+    color: #0077b5;
+    font-size: 1.25rem;
+}
+
+.social-link:hover {
+    background: #d2e5fc;
+    border-color: #59c3d0;
+}
+
+@media (max-width: 950px) {
+    .name-title h1 {
+        white-space: normal;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .cv-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        white-space: normal;
+    }
+    
+    .social-links-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
