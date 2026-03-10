@@ -46,36 +46,5 @@
             <div class="credit">arithmetic · eval()</div>
         </div>
     </div>
-
-    <script>
-        function append(val) {
-            let display = document.getElementById('result');
-            if (display.value === '0' && val !== '.') {
-                display.value = val;
-            } else {
-                display.value += val;
-            }
-        }
-
-        function backspace() {
-            let display = document.getElementById('result');
-            display.value = display.value.slice(0, -1) || '0';
-        }
-
-        function resetCalc() {
-            document.getElementById('result').value = '0';
-        }
-
-        function calculate() {
-            let display = document.getElementById('result');
-            try {
-                let expression = display.value.replace(/x/g, '*');
-                let result = eval(expression);
-                display.value = result;
-            } catch(e) {
-                display.value = 'Error';
-            }
-        }
-    </script>
 </body>
 </html>
